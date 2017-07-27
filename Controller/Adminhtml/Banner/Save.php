@@ -81,8 +81,7 @@ class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Banner
 //            $localeDate = $this->_objectManager->get('Magento\Framework\Stdlib\DateTime\TimezoneInterface');
             $localeDate = $this->_objectManager->get('Magento\Framework\Stdlib\DateTime\Timezone');
             
-            $model->setData($data)
-                ->setStoreViewId($storeViewId);
+            $model->setData($data);
 
             try {
                 $model->save();

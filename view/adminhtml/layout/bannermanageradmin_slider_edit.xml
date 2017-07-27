@@ -27,8 +27,8 @@
                 <action method="addTab">
                     <argument name="name" xsi:type="string">banner_section</argument>
                     <argument name="block" xsi:type="array">
-                        <item name="label" xsi:type="string">Banner of Slider</item>
-                        <item name="title" xsi:type="string">Banner of Slider</item>
+                        <item name="label" xsi:type="string">Banner of Group</item>
+                        <item name="title" xsi:type="string">Banner of Group</item>
                         <item name="url" xsi:type="helper" helper="Xigen\Bannermanager\Helper\Data::getSliderBannerUrl"></item>
                         <item name="class" xsi:type="string">ajax</item>
                     </argument>

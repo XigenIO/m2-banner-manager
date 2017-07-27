@@ -35,7 +35,7 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
 
         parent::_construct();
 
-        $this->buttonList->update('save', 'label', __('Save Slider'));
+        $this->buttonList->update('save', 'label', __('Save Group'));
         $this->buttonList->update('delete', 'label', __('Delete'));
 
         if ($this->getSlider()->getId()) {

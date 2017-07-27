@@ -143,6 +143,14 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
                         ],
                         'field' => 'slider_id',
                     ],
+                    [
+                        'caption' => __('Delete'),
+                        'url' => [
+                            'base' => '*/*/delete',
+                        ],
+                        'confirm' => __('Are you sure?'),
+                        'field' => 'slider_id',
+                    ],
                 ],
                 'filter' => false,
                 'sortable' => false,

@@ -57,6 +57,12 @@ class InstallSchema implements InstallSchemaInterface
             ['nullable' => true, 'default' => '1'],
             'Show Title'
         )->addColumn(
+            'store_id',
+            \Magento\Framework\DB\Ddl\Table::TYPE_INTEGER,
+            10,
+            ['nullable' => true],
+            'Store Id'
+        )->addColumn(
             'status',
             \Magento\Framework\DB\Ddl\Table::TYPE_SMALLINT,
             null,
@@ -154,12 +160,6 @@ class InstallSchema implements InstallSchemaInterface
             255,
             ['nullable' => true],
             'Banner image alt'
-        )->addColumn(
-            'style_slide',
-            \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,
-            255,
-            ['nullable' => true],
-            'Banner style'
         )->addColumn(
             'caption',
             \Magento\Framework\DB\Ddl\Table::TYPE_TEXT,

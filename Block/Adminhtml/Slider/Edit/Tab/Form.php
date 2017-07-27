@@ -75,7 +75,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
 
         $form->setHtmlIdPrefix('page_');
 
-        $fieldset = $form->addFieldset('base_fieldset', ['legend' => __('Slider Information')]);
+        $fieldset = $form->addFieldset('base_fieldset', ['legend' => __('Group Information')]);
 
         if ($slider->getId()) {
             $fieldset->addField('slider_id', 'hidden', ['name' => 'slider_id']);
@@ -207,7 +207,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
 
     public function getPageTitle()
     {
-        return $this->getSlider()->getId() ? __("Edit Slider '%1'", $this->escapeHtml($this->getSlider()->getTitle())) : __('New Slider');
+        return $this->getSlider()->getId() ? __("Edit Slider '%1'", $this->escapeHtml($this->getSlider()->getTitle())) : __('New Group');
     }
 
     /**
@@ -216,7 +216,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
      */
     public function getTabLabel()
     {
-        return __('Slider Information');
+        return __('Group Information');
     }
 
     /**
@@ -225,7 +225,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
      */
     public function getTabTitle()
     {
-        return __('Slider Information');
+        return __('Group Information');
     }
 
     /**

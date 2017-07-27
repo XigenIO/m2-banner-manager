@@ -10,11 +10,24 @@
     </div>
 <?php endif; ?>
 <div class="xigen-bannermanager-static">
-    <?php foreach ($block->getBannerCollection() as $banner) : ?>
+    <?php foreach ($block->getBannerCollection() as $banner): ?>
         <div>
-            <a href="<?php echo $banner->getClickUrl() ?>" target="<?php echo $banner->getTargetValue() ?>" style="display:block;">
-                <img alt="<?php echo $banner->getImageAlt() ?>"  src="<?php echo $block->getBannerImageUrl($banner) ?>"/>
+            <?php if($banner->getClickUrl()): ?>
+            <a href="<?php echo $banner->getClickUrl() ?>" target="<?php echo $banner->getTargetValue() ?>">
+            <?php endif; ?>
+                <img alt="<?php echo (($banner->getImageAlt()) ? $banner->getImageAlt() :  $banner->getName()); ?>" title="<?php echo (($banner->getImageAlt()) ? $banner->getImageAlt() :  $banner->getName()); ?>"  src="<?php echo $block->getBannerImageUrl($banner) ?>" class="img-responsive"/>
+            <?php if($banner->getClickUrl()): ?>
             </a>
+            <?php endif; ?>
+                        
+            <?php if($banner->getName()): ?>
+            <h2><?php echo $banner->getName() ?></h2>
+            <?php endif; ?>
+            
+            <?php if($banner->getCaption()): ?>
+            <p><?php echo strip_tags($banner->getCaption()) ?></p>
+            <?php endif; ?>
+            
         </div>
     <?php endforeach ?>
 </div>

@@ -45,7 +45,6 @@ class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
 
                     $unSelecteds = $this->_bannerCollectionFactory
                         ->create()
-                        ->setStoreViewId(null)
                         ->addFieldToFilter('slider_id', $model->getId());
                     if (count($bannerIds)) {
                         $unSelecteds->addFieldToFilter('banner_id', array('nin' => $bannerIds));
@@ -53,18 +52,15 @@ class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
 
                     foreach ($unSelecteds as $banner) {
                         $banner->setSliderId(0)
-                            ->setStoreViewId(null)
                             ->setOrderBanner(0)->save();
                     }
 
                     $selectBanner = $this->_bannerCollectionFactory
                         ->create()
-                        ->setStoreViewId(null)
                         ->addFieldToFilter('banner_id', array('in' => $bannerIds));
                     $i = -1;
                     foreach ($selectBanner as $banner) {
                         $banner->setSliderId($model->getId())
-                            ->setStoreViewId(null)
                             ->setOrderBanner($bannerOrders[++$i])->save();
                     }
                 }
