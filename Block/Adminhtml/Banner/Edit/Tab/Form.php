@@ -109,6 +109,18 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
         }
 
         $elements = [];
+        
+        $elements['status'] = $fieldset->addField(
+            'status',
+            'select',
+            [
+                'label' => __('Status'),
+                'title' => __('Banner Status'),
+                'name' => 'status',
+                'options' => Status::getAvailableStatuses(),
+            ]
+        );
+        
         $elements['name'] = $fieldset->addField(
             'name',
             'text',
@@ -129,18 +141,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
                 'name' => 'show_title',
                 'options' => Status::getAvailableStatuses(),
             ]
-        );
-
-        $elements['status'] = $fieldset->addField(
-            'status',
-            'select',
-            [
-                'label' => __('Status'),
-                'title' => __('Banner Status'),
-                'name' => 'status',
-                'options' => Status::getAvailableStatuses(),
-            ]
-        );
+        ); 
 
         $slider = $this->_sliderFactory->create()->load($sliderId);
 
