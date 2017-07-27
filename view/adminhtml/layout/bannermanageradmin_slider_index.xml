@@ -7,7 +7,7 @@
 <page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <update handle="formkey"/>
     <head>
-        <title>Slider Manager</title>
+        <title>Group Manager</title>
     </head>
     <body>
         <referenceBlock name="menu">
@@ -17,7 +17,7 @@
         </referenceBlock>
         <referenceBlock name="page.title">
             <action method="setPageTitle">
-                <argument name="pageTitle" xsi:type="string">Slider Manager</argument>
+                <argument name="pageTitle" xsi:type="string">Group Manager</argument>
             </action>
         </referenceBlock>
         <referenceContainer name="content">

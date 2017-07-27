@@ -16,7 +16,7 @@ class Slider extends \Magento\Backend\Block\Widget\Grid\Container
         $this->_controller = 'adminhtml_slider';
         $this->_blockGroup = 'Xigen_Bannermanager';
         $this->_headerText = __('Sliders');
-        $this->_addButtonLabel = __('Add New Slider');
+        $this->_addButtonLabel = __('Add New Group');
         parent::_construct();
     }
 }

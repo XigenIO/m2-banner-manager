@@ -11,7 +11,7 @@
         </tab>
         <section id="bannermanager" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
             <class>separator-top</class>
-            <label>Banner Slider</label>
+            <label>Banner Manager</label>
             <tab>xigen</tab>
             <resource>Xigen_Bannermanager::config_bannermanager</resource>
             <group id="general" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">

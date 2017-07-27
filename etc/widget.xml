@@ -6,8 +6,8 @@
 -->
 <widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Widget:etc/widget.xsd">
     <widget id="banner_slider" class="Xigen\Bannermanager\Block\Widget\Bannermanager">
-        <label translate="true">Banner Slider Widget</label>
-        <description>Choose a slideshow from: Admin » Content » Banner Slider</description>
+        <label translate="true">Banner Manager Widget</label>
+        <description>Choose a slideshow from: Admin » Content » Banner Manager</description>
         <parameters>
             <parameter name="slider" xsi:type="select" source_model="Xigen\Bannermanager\Model\Config\Source\Slider" visible="true" required="true" sort_order="10" >
                 <label translate="true">Slider</label>
