@@ -10,6 +10,7 @@ use Xigen\Bannermanager\Model\Status;
 
 class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
 {
+
     /**
      * slider collection factory.
      *
@@ -30,6 +31,7 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
      * @param \Magento\Backend\Helper\Data $backendHelper
      * @param \Xigen\Bannermanager\Model\ResourceModel\Slider\CollectionFactory $sliderCollectionFactory
      * @param \Xigen\Bannermanager\Helper\Data $bannermanagerHelper
+     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param array $data
      */
     public function __construct(
@@ -85,6 +87,24 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
                 'column_css_class' => 'col-id',
             ]
         );
+        
+         /**
+          * Check is single store mode
+          */
+        if (!$this->_storeManager->isSingleStoreMode()) {
+           $this->addColumn(
+               'store_id',
+                [
+                    'header' => __('Store View'),
+                    'index' => 'store_id',
+                    'type' => 'store',
+                    'store_all' => true,
+                    'store_view' => true,
+                    'sortable' => false
+                ]
+            );
+        }
+        
         $this->addColumn(
             'title',
             [

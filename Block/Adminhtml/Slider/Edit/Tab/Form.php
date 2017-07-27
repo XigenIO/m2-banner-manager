@@ -18,7 +18,6 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
     protected $_fieldFactory;
 
     /**
-     * [$_bannermanagerHelper description].
      * @var \Xigen\Bannermanager\Helper\Data
      */
     protected $_bannermanagerHelper;
@@ -30,6 +29,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
      * @param \Magento\Framework\Registry $registry
      * @param \Magento\Framework\Data\FormFactory $formFactory
      * @param \Magento\Config\Model\Config\Structure\Element\Dependency\FieldFactory $fieldFactory
+     * @param \Magento\Store\Model\System\Store $systemStore
      * @param array $data
      */
     public function __construct(
@@ -38,10 +38,12 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
         \Magento\Framework\Registry $registry,
         \Magento\Framework\Data\FormFactory $formFactory,
         \Magento\Config\Model\Config\Structure\Element\Dependency\FieldFactory $fieldFactory,
+        \Magento\Store\Model\System\Store $systemStore,
         array $data = []
     ) {
         $this->_bannermanagerHelper = $bannermanagerHelper;
         $this->_fieldFactory = $fieldFactory;
+        $this->_systemStore = $systemStore;
         parent::__construct($context, $registry, $formFactory, $data);
     }
 
@@ -90,6 +92,19 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
                 'title' => __('Title'),
                 'required' => true,
                 'class' => 'required-entry',
+            ]
+        );
+        
+        $fieldMaps['store_ids'] = $fieldset->addField(
+            'store_id',
+            'multiselect',
+            [
+                'name'     => 'store_ids',
+                'label'    => __('Store Views'),
+                'title'    => __('Store Views'),
+                'required' => true,
+                'values'   => $this->_systemStore->getStoreValuesForForm(false, true),
+                'disabled' => false,
             ]
         );
 

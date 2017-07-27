@@ -1,0 +1,40 @@
+<?php
+/**
+ * @author Xigen
+ */
+?>
+<div class="carousel-wrapper">
+    <div class="container">
+        <div class="row">
+            <div id="homepage-carousel" class="carousel slide hidden-xs col-xs-lip" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                <?php $i = 0; foreach ($block->getBannerCollection() as $banner): ?> <li data-target="#homepage-carousel" data-slide-to="<?php echo $i; ?>" class="<?php echo (($i == 0) ? 'active' : '');?>"></li><?php $i++; endforeach; ?>
+                </ol>
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner"><?php $i = 0; foreach ($block->getBannerCollection() as $banner): $i++; ?>                  
+                    <div class="item <?php echo (($i == 1) ? 'active' : '');?>">
+                        <?php if($banner->getClickUrl()) : ?><a href="<?php echo $banner->getClickUrl(); ?>"><?php endif; ?>
+                        <img src="<?php echo $block->getBannerImageUrl($banner) ?>" title="<?php echo $banner->getName(); ?>" alt="<?php echo $banner->getName(); ?>" />
+                        <div class="carousel-caption">
+                            <?php if($banner->getShowTitle() && $banner->getName()): ?>
+                            <h3><?php echo $banner->getName(); ?></h3>
+                            <?php endif; ?>
+                            <?php if(!empty($banner->getCaption())): ?>
+                            <p><?php echo $banner->getCaption(); ?></p>
+                            <?php endif; ?>
+                        </div>
+                        <?php if($banner->getClickUrl()) : ?></a><?php endif; ?>
+                    </div><?php endforeach; ?>    
+                </div>
+                <!-- Controls -->
+                <a class="left carousel-control" href="#homepage-carousel" data-slide="prev">
+                    <i class="fa arrows fa-chevron-left"></i>
+                </a>
+                <a class="right carousel-control" href="#homepage-carousel" data-slide="next">
+                    <i class="fa arrows fa-chevron-right"></i>
+                </a>
+            </div>
+        </div>
+    </div><!-- /.container -->
+</div><!-- /.carousel-wrapper -->

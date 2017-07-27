@@ -22,10 +22,11 @@ class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Slider
             $sliderData = $formPostValues['slider'];
             $sliderId = isset($sliderData['slider_id']) ? $sliderData['slider_id'] : null;
 
-            if (isset($sliderData['category_ids'])) {
-                $sliderData['category_ids'] = implode(',', $sliderData['category_ids']);
+            if (isset($sliderData['store_ids'])) {
+                $sliderData['store_id'] = implode(',', $sliderData['store_ids']);
+                unset($sliderData['store_ids']);
             }
-
+            
             $model = $this->_sliderFactory->create();
 
             $model->load($sliderId);

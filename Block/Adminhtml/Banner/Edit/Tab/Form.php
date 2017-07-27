@@ -119,6 +119,17 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
                 'required' => true,
             ]
         );
+        
+        $elements['show_title'] = $fieldset->addField(
+            'show_title',
+            'select',
+            [
+                'label' => __('Show Title'),
+                'title' => __('Show Title'),
+                'name' => 'show_title',
+                'options' => Status::getAvailableStatuses(),
+            ]
+        );
 
         $elements['status'] = $fieldset->addField(
             'status',

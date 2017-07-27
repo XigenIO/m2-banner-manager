@@ -13,9 +13,10 @@ class SliderItem extends \Magento\Framework\View\Element\Template
 {
 
     /**
-     * template for custom slider.
+     * template for custom slider
      */
     const STYLESLIDE_STATIC_TEMPLATE = 'Xigen_Bannermanager::slider/static.phtml';
+    const STYLESLIDE_BOOTSTRAP_TEMPLATE = 'Xigen_Bannermanager::slider/bootstrap.phtml';
 
     /**
      * Date conversion model.
@@ -114,8 +115,16 @@ class SliderItem extends \Magento\Framework\View\Element\Template
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
             $store
         );
+        
+        $show = true;
+        if($this->_slider->getStoreId() > 0) {
+            if($store != $this->_slider->getStoreId()) {
+                $show = false;
+            }
+        }
 
         if (!$configEnable
+            || !$show
             || $this->_slider->getStatus() === Status::STATUS_DISABLED
             || !$this->_slider->getId()
             || !$this->getBannerCollection()->getSize()) {
@@ -153,6 +162,10 @@ class SliderItem extends \Magento\Framework\View\Element\Template
     public function setStyleSlideTemplate($styleSlideId)
     {
         switch ($styleSlideId) {
+            case 2:
+                $this->setTemplate(self::STYLESLIDE_BOOTSTRAP_TEMPLATE);
+                break;
+            case 1:
             default:
                 $this->setTemplate(self::STYLESLIDE_STATIC_TEMPLATE);
                 break;
