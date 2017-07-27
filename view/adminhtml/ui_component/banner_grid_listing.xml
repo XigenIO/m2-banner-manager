@@ -164,15 +164,6 @@
                     <item name="provider" xsi:type="string">banner_grid_listing.banner_grid_listing.listing_top.bookmarks</item>
                     <item name="namespace" xsi:type="string">current</item>
                 </item>
-                <!--<item name="editorConfig" xsi:type="array">-->
-                    <!--<item name="selectProvider" xsi:type="string">banner_grid_listing.banner_grid_listing.banner_grid_columns.ids</item>-->
-                    <!--<item name="enabled" xsi:type="boolean">true</item>-->
-                    <!--<item name="indexField" xsi:type="string">banner_id</item>-->
-                    <!--<item name="clientConfig" xsi:type="array">-->
-                        <!--<item name="saveUrl" xsi:type="url" path="bannermanageradmin/banner/inlineEdit"/>-->
-                        <!--<item name="validateBeforeSave" xsi:type="boolean">false</item>-->
-                    <!--</item>-->
-                <!--</item>-->
                 <item name="childDefaults" xsi:type="array">
                     <item name="fieldAction" xsi:type="array">
                         <item name="provider" xsi:type="string">banner_grid_listing.banner_grid_listing.banner_grid_columns_editor</item>
@@ -212,12 +203,6 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>
-                    <!--<item name="editor" xsi:type="array">-->
-                        <!--<item name="editorType" xsi:type="string">text</item>-->
-                        <!--<item name="validation" xsi:type="array">-->
-                            <!--<item name="required-entry" xsi:type="boolean">true</item>-->
-                        <!--</item>-->
-                    <!--</item>-->
                     <item name="label" xsi:type="string" translate="true">Name</item>
                 </item>
             </argument>
@@ -239,12 +224,6 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="filter" xsi:type="string">text</item>
-                    <!--<item name="editor" xsi:type="array">-->
-                        <!--<item name="editorType" xsi:type="string">text</item>-->
-                        <!--<item name="validation" xsi:type="array">-->
-                            <!--<item name="required-entry" xsi:type="boolean">true</item>-->
-                        <!--</item>-->
-                    <!--</item>-->
                     <item name="label" xsi:type="string" translate="true">URL</item>
                 </item>
             </argument>

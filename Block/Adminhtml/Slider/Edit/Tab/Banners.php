@@ -96,7 +96,6 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
             [
                 'header' => __('Name'),
                 'index' => 'name',
-                'class' => 'xxx',
                 'width' => '50px',
             ]
         );
@@ -105,7 +104,6 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
             [
                 'header' => __('Image'),
                 'filter' => false,
-                'class' => 'xxx',
                 'width' => '50px',
                 'renderer' => 'Xigen\Bannermanager\Block\Adminhtml\Banner\Helper\Renderer\Image',
             ]
@@ -115,7 +113,6 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
             [
                 'header' => __('Slider'),
                 'index' => 'title',
-                'class' => 'xxx',
                 'width' => '50px',
             ]
         );
@@ -128,6 +125,17 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
                 'type' => 'options',
                 'filter_index' => 'main_table.status',
                 'options' => Status::getAvailableStatuses(),
+            ]
+        );
+        
+        $this->addColumn(
+            'order_banner_slider',
+            [
+                'header' => __('Order'),
+                'name' => 'order_banner_slider',
+                'index' => 'order_banner_slider',
+                'width' => '50px',
+                'editable' => true,
             ]
         );
 
@@ -144,17 +152,7 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
             ]
         );
 
-        $this->addColumn(
-            'order_banner_slider',
-            [
-                'header' => __('Order'),
-                'name' => 'order_banner_slider',
-                'index' => 'order_banner_slider',
-                'class' => 'xxx',
-                'width' => '50px',
-                'editable' => true,
-            ]
-        );
+     
 
         return parent::_prepareColumns();
     }

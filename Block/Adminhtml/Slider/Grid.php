@@ -13,14 +13,12 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
 
     /**
      * slider collection factory.
-     *
      * @var \Xigen\Bannermanager\Model\ResourceModel\Slider\CollectionFactory
      */
     protected $_sliderCollectionFactory;
 
     /**
-     * helper.
-     *
+     * helper
      * @var \Xigen\Bannermanager\Helper\Data
      */
     protected $_bannermanagerHelper;
@@ -31,7 +29,6 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
      * @param \Magento\Backend\Helper\Data $backendHelper
      * @param \Xigen\Bannermanager\Model\ResourceModel\Slider\CollectionFactory $sliderCollectionFactory
      * @param \Xigen\Bannermanager\Helper\Data $bannermanagerHelper
-     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param array $data
      */
     public function __construct(
@@ -110,7 +107,6 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
             [
                 'header' => __('Title'),
                 'index' => 'title',
-                'class' => 'xxx',
                 'width' => '50px',
             ]
         );
@@ -121,7 +117,6 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
                 'header' => __('Position'),
                 'index' => 'position',
                 'type' => 'options',
-                'class' => 'xxx',
                 'width' => '50px',
                 'options' => $this->_bannermanagerHelper->getAvailablePositions(),
             ]
@@ -132,7 +127,6 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
             [
                 'header' => __('Slider\'s Mode'),
                 'index' => 'style_slide',
-                'class' => 'xxx',
                 'width' => '50px',
                 'type' => 'options',
                 'options' => $this->_bannermanagerHelper->getSliderModeAvailable(),

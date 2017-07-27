@@ -239,6 +239,16 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
                 ],
             ]
         );
+        
+        $elements['order_banner'] = $fieldset->addField(
+            'order_banner',
+            'text',
+            [
+                'title' => __('Order'),
+                'label' => __('Order'),
+                'name' => 'order_banner',
+            ]
+        );
 
         $form->setValues($banner->getData());
         $this->setForm($form);

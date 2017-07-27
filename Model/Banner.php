@@ -15,7 +15,7 @@ class Banner extends \Magento\Framework\Model\AbstractModel
     const BANNER_TARGET_BLANK = 2;
 
     /**
-     * slider colleciton factory
+     * slider collection factory
      * @var \Xigen\Bannermanager\Model\ResourceModel\Slider\CollectionFactory
      */
     protected $_sliderCollectionFactory;
