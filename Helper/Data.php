@@ -17,26 +17,22 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * Store manager.
-     *
      * @var \Magento\Store\Model\StoreManagerInterface
      */
     protected $_storeManager;
 
     /**
      * category collection factory.
-     *
      * @var \Magento\Catalog\Model\ResourceModel\Category\CollectionFactory
      */
     protected $_categoryCollectionFactory;
 
     /**
-     * [__construct description].
-     *
-     * @param \Magento\Framework\App\Helper\Context                      $context              [description]
-     * @param \Magento\Directory\Helper\Data                             $directoryData        [description]
-     * @param \Magento\Directory\Model\ResourceModel\Country\Collection       $countryCollection    [description]
-     * @param \Magento\Directory\Model\ResourceModel\Region\CollectionFactory $regCollectionFactory [description]
-     * @param \Magento\Store\Model\StoreManagerInterface                 $storeManager         [description]
+     * 
+     * @param \Magento\Framework\App\Helper\Context $context
+     * @param \Magento\Catalog\Model\ResourceModel\Category\CollectionFactory $categoryCollectionFactory
+     * @param \Magento\Backend\Model\UrlInterface $backendUrl
+     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      */
     public function __construct(
         \Magento\Framework\App\Helper\Context $context,
@@ -52,11 +48,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * get Base Url Media.
-     *
-     * @param string $path   [description]
-     * @param bool   $secure [description]
-     *
-     * @return string [description]
+     * @param string $path   
+     * @param bool   $secure 
+     * @return string 
      */
     public function getBaseUrlMedia($path = '', $secure = false)
     {
@@ -65,7 +59,6 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * get categories array.
-     *
      * @return array
      */
     public function getCategoriesArray()

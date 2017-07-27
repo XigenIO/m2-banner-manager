@@ -9,7 +9,6 @@ namespace Xigen\Bannermanager\Block\Adminhtml\Banner;
 class Edit extends \Magento\Backend\Block\Widget\Form\Container
 {
     /**
-     * _construct
      * @return void
      */
     protected function _construct()
@@ -58,29 +57,29 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
             );
 
             $this->_formScripts[] = "
-				require(['jquery'], function($){
-					$(document).ready(function(){
-						var input = $('<input class=\"custom-button-submit\" type=\"submit\" hidden=\"true\" />');
-						$(edit_form).append(input);
+                require(['jquery'], function($){
+                    $(document).ready(function(){
+                        var input = $('<input class=\"custom-button-submit\" type=\"submit\" hidden=\"true\" />');
+                        $(edit_form).append(input);
 
-						window.customsaveAndContinueEdit = function (){
-							edit_form.action = '".$this->getSaveAndContinueUrl()."';
-							$('.custom-button-submit').trigger('click');
+                        window.customsaveAndContinueEdit = function (){
+                            edit_form.action = '".$this->getSaveAndContinueUrl()."';
+                            $('.custom-button-submit').trigger('click');
 
-				        }
+                        }
 
-			    		window.saveAndCloseWindow = function (){
-			    			edit_form.action = '".$this->getSaveAndCloseWindowUrl()."';
-							$('.custom-button-submit').trigger('click');
-			            }
-					});
-				});
-			";
+                        window.saveAndCloseWindow = function (){
+                            edit_form.action = '".$this->getSaveAndCloseWindowUrl()."';
+                            $('.custom-button-submit').trigger('click');
+                        }
+                    });
+                });
+            ";
 
             if ($bannerId = $this->getRequest()->getParam('banner_id')) {
                 $this->_formScripts[] = '
-					window.banner_id = '.$bannerId.';
-				';
+                    window.banner_id = '.$bannerId.';
+                ';
             }
         } else {
             $this->buttonList->add(
@@ -105,7 +104,6 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
 
     /**
      * Retrieve the save and continue edit Url.
-     *
      * @return string
      */
     protected function getSaveAndContinueUrl()
@@ -125,7 +123,6 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
 
     /**
      * Retrieve the save and continue edit Url.
-     *
      * @return string
      */
     protected function getSaveAndCloseWindowUrl()

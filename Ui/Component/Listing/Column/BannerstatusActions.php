@@ -21,13 +21,12 @@ class BannerstatusActions extends \Xigen\Bannermanager\Ui\Component\Listing\Colu
     protected $urlBuilder;
 
     /**
-     * Constructor.
-     *
-     * @param ContextInterface   $context
+     * 
+     * @param ContextInterface $context
      * @param UiComponentFactory $uiComponentFactory
-     * @param UrlInterface       $urlBuilder
-     * @param array              $components
-     * @param array              $data
+     * @param UrlInterface $urlBuilder
+     * @param array $components
+     * @param array $data
      */
     public function __construct(
         ContextInterface $context,
@@ -41,10 +40,8 @@ class BannerstatusActions extends \Xigen\Bannermanager\Ui\Component\Listing\Colu
     }
 
     /**
-     * prepare item.
-     *
+     * prepare item
      * @param array $item
-     *
      * @return $this
      */
     protected function _prepareItem(array & $item) {

@@ -9,7 +9,7 @@ namespace Xigen\Bannermanager\Block\Adminhtml\Banner\Edit;
 class Tabs extends \Magento\Backend\Block\Widget\Tabs
 {
     /**
-     * construct.
+     * constructor
      */
     protected function _construct()
     {

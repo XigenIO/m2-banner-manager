@@ -10,7 +10,6 @@ abstract class AbstractColumn extends \Magento\Ui\Component\Listing\Columns\Colu
 {
     /**
      * Prepare Data Source
-     *
      * @param array $dataSource
      * @return array
      */
@@ -27,9 +26,7 @@ abstract class AbstractColumn extends \Magento\Ui\Component\Listing\Columns\Colu
 
     /**
      * prepare item.
-     *
      * @param array $item
-     *
      * @return array
      */
     abstract protected function _prepareItem(array & $item);

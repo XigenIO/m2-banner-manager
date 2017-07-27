@@ -88,7 +88,9 @@ abstract class AbstractAction extends \Magento\Backend\App\Action
      * @var \Magento\Framework\Image\AdapterFactory
      */
     protected $_adapterFactory;
+
     /**
+     * 
      * @param \Magento\Backend\App\Action\Context $context
      * @param \Xigen\Bannermanager\Model\BannerFactory $bannerFactory
      * @param \Xigen\Bannermanager\Model\SliderFactory $sliderFactory
@@ -101,6 +103,9 @@ abstract class AbstractAction extends \Magento\Backend\App\Action
      * @param \Magento\Backend\Model\View\Result\ForwardFactory $resultForwardFactory
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param \Magento\Backend\Helper\Js $jsHelper
+     * @param \Magento\Ui\Component\MassAction\Filter $massActionFilter
+     * @param \Magento\MediaStorage\Model\File\UploaderFactory $uploaderFactory
+     * @param \Magento\Framework\Image\AdapterFactory $adapterFactory
      */
     public function __construct(
         \Magento\Backend\App\Action\Context $context,

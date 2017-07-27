@@ -12,7 +12,6 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
     protected $_idFieldName = 'slider_id';
     /**
      * store view id.
-     *
      * @var int
      */
     protected $_storeViewId = null;
@@ -48,12 +47,15 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
     }
 
     /**
-     * @param \Magento\Framework\Data\Collection\EntityFactoryInterface    $entityFactory
-     * @param \Psr\Log\LoggerInterface                                     $logger
+     * 
+     * @param \Magento\Framework\Data\Collection\EntityFactoryInterface $entityFactory
+     * @param \Psr\Log\LoggerInterface $logger
      * @param \Magento\Framework\Data\Collection\Db\FetchStrategyInterface $fetchStrategy
-     * @param \Magento\Framework\Event\ManagerInterface                    $eventManager
-     * @param \Zend_Db_Adapter_Abstract                                    $connection
-     * @param \Magento\Framework\Model\ResourceModel\Db\AbstractDb              $resource
+     * @param \Magento\Framework\Event\ManagerInterface $eventManager
+     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
+     * @param \Magento\Framework\Stdlib\DateTime\Timezone $stdTimezone
+     * @param type $connection
+     * @param \Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource
      */
     public function __construct(
         \Magento\Framework\Data\Collection\EntityFactoryInterface $entityFactory,

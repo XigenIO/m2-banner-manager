@@ -24,21 +24,23 @@ class Collection extends BannerCollection implements SearchResultInterface
     protected $aggregations;
 
     /**
+     * 
      * @param \Magento\Framework\Data\Collection\EntityFactoryInterface $entityFactory
      * @param \Psr\Log\LoggerInterface $logger
      * @param \Magento\Framework\Data\Collection\Db\FetchStrategyInterface $fetchStrategy
      * @param \Magento\Framework\Event\ManagerInterface $eventManager
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
-     * @param mixed|null $mainTable
-     * @param \Magento\Framework\Model\ResourceModel\Db\AbstractDb $eventPrefix
-     * @param mixed $eventObject
-     * @param mixed $resourceModel
-     * @param string $model
-     * @param null $connection
-     * @param \Magento\Framework\Model\ResourceModel\Db\AbstractDb|null $resource
-     *
-     * @SuppressWarnings(PHPMD.ExcessiveParameterList)
+     * @param \Magento\Framework\Stdlib\DateTime\Timezone $stdTimezone
+     * @param \Xigen\Bannermanager\Model\Slider $slider
+     * @param type $mainTable
+     * @param type $eventPrefix
+     * @param type $eventObject
+     * @param type $resourceModel
+     * @param type $model
+     * @param type $connection
+     * @param \Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource
      */
+    
     public function __construct(
         \Magento\Framework\Data\Collection\EntityFactoryInterface $entityFactory,
         \Psr\Log\LoggerInterface $logger,
@@ -91,9 +93,7 @@ class Collection extends BannerCollection implements SearchResultInterface
 
 
     /**
-     * Retrieve all ids for collection
-     * Backward compatibility with EAV collection
-     *
+     * Retrieve all ids for collection.  Backward compatibility with EAV collection.
      * @param int $limit
      * @param int $offset
      * @return array
@@ -105,7 +105,6 @@ class Collection extends BannerCollection implements SearchResultInterface
 
     /**
      * Get search criteria.
-     *
      * @return \Magento\Framework\Api\SearchCriteriaInterface|null
      */
     public function getSearchCriteria()
@@ -115,10 +114,8 @@ class Collection extends BannerCollection implements SearchResultInterface
 
     /**
      * Set search criteria.
-     *
      * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
      * @return $this
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function setSearchCriteria(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria = null)
     {
@@ -127,7 +124,6 @@ class Collection extends BannerCollection implements SearchResultInterface
 
     /**
      * Get total count.
-     *
      * @return int
      */
     public function getTotalCount()
@@ -137,10 +133,8 @@ class Collection extends BannerCollection implements SearchResultInterface
 
     /**
      * Set total count.
-     *
      * @param int $totalCount
      * @return $this
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function setTotalCount($totalCount)
     {
@@ -149,10 +143,8 @@ class Collection extends BannerCollection implements SearchResultInterface
 
     /**
      * Set items list.
-     *
      * @param \Magento\Framework\Api\ExtensibleDataInterface[] $items
      * @return $this
-     * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
     public function setItems(array $items = null)
     {

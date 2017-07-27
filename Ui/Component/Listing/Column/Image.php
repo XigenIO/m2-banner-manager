@@ -25,12 +25,13 @@ class Image extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractCol
     protected $_storeManager;
 
     /**
-     * Constructor.
-     *
-     * @param ContextInterface   $context
+     * 
+     * @param ContextInterface $context
      * @param UiComponentFactory $uiComponentFactory
-     * @param array              $components
-     * @param array              $data
+     * @param \Magento\Framework\Filesystem $filesystem
+     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
+     * @param array $components
+     * @param array $data
      */
     public function __construct(
         ContextInterface $context,
@@ -46,9 +47,7 @@ class Image extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractCol
 
     /**
      * prepare item.
-     *
      * @param array $item
-     *
      * @return array
      */
     protected function _prepareItem(array & $item)

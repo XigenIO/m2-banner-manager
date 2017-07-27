@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Xigen
+ */
+
 namespace Xigen\Bannermanager\Controller\Adminhtml\Banner;
 
 use Magento\Framework\App\Filesystem\DirectoryList;

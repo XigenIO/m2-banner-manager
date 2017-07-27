@@ -25,13 +25,12 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
     protected $_bannermanagerHelper;
 
     /**
-     * [__construct description].
-     *
-     * @param \Magento\Backend\Block\Template\Context                         $context
-     * @param \Magento\Backend\Helper\Data                                    $backendHelper
+     * Constructor
+     * @param \Magento\Backend\Block\Template\Context $context
+     * @param \Magento\Backend\Helper\Data $backendHelper
      * @param \Xigen\Bannermanager\Model\ResourceModel\Slider\CollectionFactory $sliderCollectionFactory
-     * @param \Xigen\Bannermanager\Helper\Data                             $bannermanagerHelper
-     * @param array                                                           $data
+     * @param \Xigen\Bannermanager\Helper\Data $bannermanagerHelper
+     * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
@@ -46,9 +45,7 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
     }
 
     /**
-     * [_construct description].
-     *
-     * @return [type] [description]
+     * 
      */
     protected function _construct()
     {
@@ -63,7 +60,7 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
     /**
      * prepare collection.
      *
-     * @return [type] [description]
+     * @return [type] 
      */
     protected function _prepareCollection()
     {

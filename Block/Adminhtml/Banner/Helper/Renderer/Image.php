@@ -10,25 +10,22 @@ class Image extends \Magento\Backend\Block\Widget\Grid\Column\Renderer\AbstractR
 {
     /**
      * Store manager.
-     *
      * @var \Magento\Store\Model\StoreManagerInterface
      */
     protected $_storeManager;
 
     /**
      * banner factory.
-     *
      * @var \Xigen\Bannermanager\Model\BannerFactory
      */
     protected $_bannerFactory;
 
     /**
-     * [__construct description].
-     *
-     * @param \Magento\Backend\Block\Context              $context
-     * @param \Magento\Store\Model\StoreManagerInterface  $storeManager
+     * Constructor
+     * @param \Magento\Backend\Block\Context $context
+     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
      * @param \Xigen\Bannermanager\Model\BannerFactory $bannerFactory
-     * @param array                                       $data
+     * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Context $context,
@@ -43,9 +40,7 @@ class Image extends \Magento\Backend\Block\Widget\Grid\Column\Renderer\AbstractR
 
     /**
      * Render action.
-     *
      * @param \Magento\Framework\DataObject $row
-     *
      * @return string
      */
     public function render(\Magento\Framework\DataObject $row)

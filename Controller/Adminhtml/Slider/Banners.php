@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Xigen
+ */
+
 namespace Xigen\Bannermanager\Controller\Adminhtml\Slider;
 
 class Banners extends \Xigen\Bannermanager\Controller\Adminhtml\Slider

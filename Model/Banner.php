@@ -15,22 +15,19 @@ class Banner extends \Magento\Framework\Model\AbstractModel
     const BANNER_TARGET_BLANK = 2;
 
     /**
-     * slider colleciton factory.
-     *
+     * slider colleciton factory
      * @var \Xigen\Bannermanager\Model\ResourceModel\Slider\CollectionFactory
      */
     protected $_sliderCollectionFactory;
 
     /**
-     * banner factory.
-     *
+     * banner factory
      * @var \Xigen\Bannermanager\Model\BannerFactory
      */
     protected $_bannerFactory;
 
     /**
      * [$_formFieldHtmlIdPrefix description].
-     *
      * @var string
      */
     protected $_formFieldHtmlIdPrefix = 'page_';
@@ -42,21 +39,20 @@ class Banner extends \Magento\Framework\Model\AbstractModel
 
     /**
      * logger.
-     *
      * @var \Magento\Framework\Logger\Monolog
      */
     protected $_monolog;
 
     /**
-     * [__construct description].
-     *
-     * @param \Magento\Framework\Model\Context                                $context
-     * @param \Magento\Framework\Registry                                     $registry
-     * @param \Xigen\Bannermanager\Model\ResourceModel\Banner                   $resource
-     * @param \Xigen\Bannermanager\Model\ResourceModel\Banner\Collection        $resourceCollection
-     * @param \Xigen\Bannermanager\Model\BannerFactory                     $bannerFactory
+     * 
+     * @param \Magento\Framework\Model\Context $context
+     * @param \Magento\Framework\Registry $registry
+     * @param \Xigen\Bannermanager\Model\ResourceModel\Banner $resource
+     * @param \Xigen\Bannermanager\Model\ResourceModel\Banner\Collection $resourceCollection
+     * @param \Xigen\Bannermanager\Model\BannerFactory $bannerFactory
      * @param \Xigen\Bannermanager\Model\ResourceModel\Slider\CollectionFactory $sliderCollectionFactory
-     * @param \Magento\Store\Model\StoreManagerInterface                      $storeManager
+     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
+     * @param \Magento\Framework\Logger\Monolog $monolog
      */
     public function __construct(
         \Magento\Framework\Model\Context $context,
@@ -87,7 +83,6 @@ class Banner extends \Magento\Framework\Model\AbstractModel
 
     /**
      * get form field html id prefix.
-     *
      * @return string
      */
     public function getFormFieldHtmlIdPrefix()
@@ -97,7 +92,6 @@ class Banner extends \Magento\Framework\Model\AbstractModel
 
     /**
      * get availabe slide.
-     *
      * @return []
      */
     public function getAvailableSlides()
@@ -120,7 +114,6 @@ class Banner extends \Magento\Framework\Model\AbstractModel
 
     /**
      * get store attributes.
-     *
      * @return array
      */
     public function getStoreAttributes()
@@ -138,7 +131,6 @@ class Banner extends \Magento\Framework\Model\AbstractModel
 
     /**
      * get target value.
-     *
      * @return string
      */
     public function getTargetValue()

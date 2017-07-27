@@ -17,7 +17,6 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
 
     /**
      * slider factory.
-     *
      * @var \Xigen\Bannermanager\Model\SliderFactory
      */
     protected $_sliderFactory;
@@ -33,16 +32,18 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
     protected $_wysiwygConfig;
 
     protected $dateTime;
+    
     /**
-     * constructor.
-     *
-     * @param \Magento\Backend\Block\Template\Context                        $context
-     * @param \Magento\Framework\Registry                                    $registry
-     * @param \Magento\Framework\Data\FormFactory                            $formFactory
-     * @param \Magento\Framework\DataObjectFactory                               $objectFactory
-     * @param \Xigen\Bannermanager\Model\Banner                           $banner
-     * @param \Xigen\Bannermanager\Model\SliderFactory                    $sliderFactory
-     * @param array                                                          $data
+     * Constructor
+     * @param \Magento\Backend\Block\Template\Context $context
+     * @param \Magento\Framework\Registry $registry
+     * @param \Magento\Framework\Data\FormFactory $formFactory
+     * @param \Magento\Framework\DataObjectFactory $objectFactory
+     * @param \Xigen\Bannermanager\Model\Banner $banner
+     * @param \Xigen\Bannermanager\Model\SliderFactory $sliderFactory
+     * @param \Magento\Cms\Model\Wysiwyg\Config $wysiwygConfig
+     * @param \Magento\Framework\Stdlib\DateTime\Timezone $dateTime
+     * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,

@@ -12,7 +12,6 @@ abstract class Slider extends \Xigen\Bannermanager\Controller\Adminhtml\Abstract
 
     /**
      * Check if admin has permissions to visit related pages.
-     *
      * @return bool
      */
     protected function _isAllowed()

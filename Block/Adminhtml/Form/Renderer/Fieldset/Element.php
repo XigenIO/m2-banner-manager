@@ -31,7 +31,6 @@ class Element extends \Magento\Backend\Block\Widget\Form\Renderer\Fieldset\Eleme
 
     /**
      * Check "Use default" checkbox display availability.
-     *
      * @return bool
      */
     public function canDisplayUseDefault()
@@ -41,7 +40,6 @@ class Element extends \Magento\Backend\Block\Widget\Form\Renderer\Fieldset\Eleme
 
     /**
      * Check default value usage fact.
-     *
      * @return bool
      */
     public function usedDefault()
@@ -51,7 +49,6 @@ class Element extends \Magento\Backend\Block\Widget\Form\Renderer\Fieldset\Eleme
 
     /**
      * Disable field in default value using case.
-     *
      * @return \Magento\Catalog\Block\Adminhtml\Form\Renderer\Fieldset\Element
      */
     public function checkFieldDisable()
@@ -77,7 +74,6 @@ class Element extends \Magento\Backend\Block\Widget\Form\Renderer\Fieldset\Eleme
 
     /**
      * Retrieve element label html.
-     *
      * @return string
      */
     public function getElementLabelHtml()
@@ -93,7 +89,6 @@ class Element extends \Magento\Backend\Block\Widget\Form\Renderer\Fieldset\Eleme
 
     /**
      * Retrieve element html.
-     *
      * @return string
      */
     public function getElementHtml()
@@ -103,7 +98,6 @@ class Element extends \Magento\Backend\Block\Widget\Form\Renderer\Fieldset\Eleme
 
     /**
      * Default sore ID getter.
-     *
      * @return int
      */
     protected function _getDefaultStoreId()

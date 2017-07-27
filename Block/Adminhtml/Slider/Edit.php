@@ -10,7 +10,6 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
 {
     /**
      * Core registry.
-     *
      * @var \Magento\Framework\Registry
      */
     protected $_coreRegistry;
@@ -66,27 +65,27 @@ class Edit extends \Magento\Backend\Block\Widget\Form\Container
         );
 
         $this->_formScripts[] = "
-			require(['jquery'], function($){
-				window.openBannerPopupWindow = function (url) {
-					var left = ($(document).width()-1000)/2, height= $(document).height();
-					var create_banner_popupwindow = window.open(url, '_blank','width=1000,resizable=1,scrollbars=1,toolbar=1,'+'left='+left+',height='+height);
-					var windowFocusHandle = function(){
-						if (create_banner_popupwindow.closed) {
-							if (typeof bannerGridJsObject !== 'undefined' && create_banner_popupwindow.banner_id) {
-								bannerGridJsObject.reloadParams['banner[]'].push(create_banner_popupwindow.banner_id + '');
-								$(edit_form.slider_banner).val($(edit_form.slider_banner).val() + '&' + create_banner_popupwindow.banner_id + '=' + Base64.encode('order_banner_slider=0'));
-				       			bannerGridJsObject.setPage(create_banner_popupwindow.banner_id);
-				       		}
-				       		$(window).off('focus',windowFocusHandle);
-						} else {
-							$(create_banner_popupwindow).trigger('focus');
-							create_banner_popupwindow.alert('".__('You have to save banner and close this window!')."');
-						}
-					}
-					$(window).focus(windowFocusHandle);
-				}
-			});
-		";
+            require(['jquery'], function($){
+                window.openBannerPopupWindow = function (url) {
+                    var left = ($(document).width()-1000)/2, height= $(document).height();
+                    var create_banner_popupwindow = window.open(url, '_blank','width=1000,resizable=1,scrollbars=1,toolbar=1,'+'left='+left+',height='+height);
+                    var windowFocusHandle = function(){
+                        if (create_banner_popupwindow.closed) {
+                            if (typeof bannerGridJsObject !== 'undefined' && create_banner_popupwindow.banner_id) {
+                                bannerGridJsObject.reloadParams['banner[]'].push(create_banner_popupwindow.banner_id + '');
+                                $(edit_form.slider_banner).val($(edit_form.slider_banner).val() + '&' + create_banner_popupwindow.banner_id + '=' + Base64.encode('order_banner_slider=0'));
+                                   bannerGridJsObject.setPage(create_banner_popupwindow.banner_id);
+                               }
+                               $(window).off('focus',windowFocusHandle);
+                        } else {
+                            $(create_banner_popupwindow).trigger('focus');
+                            create_banner_popupwindow.alert('".__('You have to save banner and close this window!')."');
+                        }
+                    }
+                    $(window).focus(windowFocusHandle);
+                }
+            });
+        ";
     }
 
     public function getSlider()

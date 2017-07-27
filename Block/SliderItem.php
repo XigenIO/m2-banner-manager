@@ -72,17 +72,15 @@ class SliderItem extends \Magento\Framework\View\Element\Template
     protected $_stdTimezone;
 
     /**
-     * [__construct description].
-     *
-     * @param \Magento\Framework\View\Element\Template\Context                $context
-     * @param \Xigen\Bannermanager\Model\ResourceModel\Banner\CollectionFactory $bannerCollectionFactory
-     * @param \Xigen\Bannermanager\Model\SliderFactory                     $sliderFactory
+     * Constructor
+     * @param \Magento\Framework\View\Element\Template\Context $context
+     * @param \Xigen\Bannermanager\Model\ResourceModel\Banner\Collection $bannerCollectionFactory
+     * @param \Xigen\Bannermanager\Model\SliderFactory $sliderFactory
      * @param SliderModel $slider
-     * @param \Magento\Framework\Stdlib\DateTime\DateTime                     $stdlibDateTime
-     * @param \Xigen\Bannermanager\Helper\Data                             $bannermanagerHelper
-     * @param \Magento\Store\Model\StoreManagerInterface                      $storeManager
-     * @param \Magento\Framework\Stdlib\DateTime\Timezone                     $_stdTimezone
-     * @param array                                                           $data
+     * @param \Magento\Framework\Stdlib\DateTime\DateTime $stdlibDateTime
+     * @param \Xigen\Bannermanager\Helper\Data $bannermanagerHelper
+     * @param \Magento\Framework\Stdlib\DateTime\Timezone $_stdTimezone
+     * @param array $data
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
@@ -203,7 +201,7 @@ class SliderItem extends \Magento\Framework\View\Element\Template
     /**
      * set slider model.
      *
-     * @param \Xigen\Bannermanager\Model\Slider $slider [description]
+     * @param \Xigen\Bannermanager\Model\Slider $slider 
      */
     public function setSlider(\Xigen\Bannermanager\Model\Slider $slider)
     {

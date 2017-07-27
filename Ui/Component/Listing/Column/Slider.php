@@ -22,13 +22,16 @@ class Slider extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractCo
      * @var \Xigen\Bannermanager\Model\SliderFactory
      */
     protected $_sliderFactory;
+    
     /**
-     * Constructor.
-     *
-     * @param ContextInterface   $context
+     * 
+     * @param ContextInterface $context
      * @param UiComponentFactory $uiComponentFactory
-     * @param array              $components
-     * @param array              $data
+     * @param \Magento\Framework\Filesystem $filesystem
+     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
+     * @param \Xigen\Bannermanager\Model\SliderFactory $sliderFactory
+     * @param array $components
+     * @param array $data
      */
     public function __construct(
         ContextInterface $context,
@@ -46,9 +49,7 @@ class Slider extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractCo
 
     /**
      * prepare item.
-     *
      * @param array $item
-     *
      * @return array
      */
     protected function _prepareItem(array & $item)
@@ -57,7 +58,6 @@ class Slider extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractCo
 
         if (isset($item[$this->getData('name')])) {
             if ($item[$this->getData('name')]) {
-
                 $item[$this->getData('name')] = sprintf(
                     '%s',
                     $slider->getTitle()
@@ -66,7 +66,6 @@ class Slider extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractCo
                 $item[$this->getData('name')] = '';
             }
         }
-
         return $item;
     }
 }

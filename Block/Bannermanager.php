@@ -19,28 +19,23 @@ class Bannermanager extends \Magento\Framework\View\Element\Template
 
     /**
      * Registry object.
-     *
      * @var \Magento\Framework\Registry
      */
     protected $_coreRegistry;
 
     /**
      * slider collecion factory.
-     *
      * @var \Xigen\Bannermanager\Model\ResourceModel\Slider\CollectionFactory
      */
     protected $_sliderCollectionFactory;
 
     /**
-     * [__construct description].
-     *
-     * @param \Magento\Framework\View\Element\Template\Context                $context
-     * @param \Magento\Framework\Registry                                     $coreRegistry
+     * Constructor
+     * @param \Magento\Framework\View\Element\Template\Context $context
+     * @param \Magento\Framework\Registry $coreRegistry
      * @param \Xigen\Bannermanager\Model\ResourceModel\Slider\CollectionFactory $sliderCollectionFactory
      * @param \Xigen\Bannermanager\Model\ResourceModel\Banner\CollectionFactory $bannerCollectionFactory
-     * @param \Magento\Catalog\Model\CategoryFactory                          $categoryFactory
-     * @param \Magento\Store\Model\StoreManagerInterface                      $storeManager
-     * @param array                                                           $data
+     * @param array $data
      */
     public function __construct(
         \Magento\Framework\View\Element\Template\Context $context,
@@ -74,9 +69,9 @@ class Bannermanager extends \Magento\Framework\View\Element\Template
     /**
      * add child block slider.
      *
-     * @param \Xigen\Bannermanager\Model\ResourceModel\Slider\Collection $sliderCollection [description]
+     * @param \Xigen\Bannermanager\Model\ResourceModel\Slider\Collection $sliderCollection 
      *
-     * @return \Xigen\Bannermanager\Block\Bannermanager [description]
+     * @return \Xigen\Bannermanager\Block\Bannermanager 
      */
     public function appendChildBlockSliders(
         \Xigen\Bannermanager\Model\ResourceModel\Slider\Collection $sliderCollection

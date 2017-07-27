@@ -27,19 +27,17 @@ class Slider extends \Magento\Framework\Model\AbstractModel
 
     /**
      * banner collection factory.
-     *
      * @var \Xigen\Bannermanager\Model\ResourceModel\Banner\CollectionFactory
      */
     protected $_bannerCollectionFactory;
 
     /**
-     * constructor.
-     *
-     * @param \Magento\Framework\Model\Context                                $context
-     * @param \Magento\Framework\Registry                                     $registry
+     * 
+     * @param \Magento\Framework\Model\Context $context
+     * @param \Magento\Framework\Registry $registry
      * @param \Xigen\Bannermanager\Model\ResourceModel\Banner\CollectionFactory $bannerCollectionFactory
-     * @param \Xigen\Bannermanager\Model\ResourceModel\Slider                   $resource
-     * @param \Xigen\Bannermanager\Model\ResourceModel\Slider\Collection        $resourceCollection
+     * @param \Xigen\Bannermanager\Model\ResourceModel\Slider $resource
+     * @param \Xigen\Bannermanager\Model\ResourceModel\Slider\Collection $resourceCollection
      */
     public function __construct(
         \Magento\Framework\Model\Context $context,
@@ -59,7 +57,6 @@ class Slider extends \Magento\Framework\Model\AbstractModel
 
     /**
      * get banner collection of slider.
-     *
      * @return \Xigen\Bannermanager\Model\ResourceModel\Banner\Collection
      */
     public function getOwnBanerCollection()

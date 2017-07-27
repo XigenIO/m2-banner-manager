@@ -19,21 +19,18 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
 
     /**
      * [$_bannermanagerHelper description].
-     *
      * @var \Xigen\Bannermanager\Helper\Data
      */
     protected $_bannermanagerHelper;
 
     /**
-     * [__construct description].
-     *
-     * @param \Magento\Backend\Block\Template\Context                                $context            [description]
-     * @param \Xigen\Bannermanager\Helper\Data                                    $bannermanagerHelper [description]
-     * @param \Magento\Framework\Registry                                            $registry           [description]
-     * @param \Magento\Framework\Data\FormFactory                                    $formFactory        [description]
-     * @param \Magento\Store\Model\System\Store                                      $systemStore        [description]
-     * @param \Magento\Config\Model\Config\Structure\Element\Dependency\FieldFactory $fieldFactory       [description]
-     * @param array                                                                  $data               [description]
+     * Constructor
+     * @param \Magento\Backend\Block\Template\Context $context
+     * @param \Xigen\Bannermanager\Helper\Data $bannermanagerHelper
+     * @param \Magento\Framework\Registry $registry
+     * @param \Magento\Framework\Data\FormFactory $formFactory
+     * @param \Magento\Config\Model\Config\Structure\Element\Dependency\FieldFactory $fieldFactory
+     * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
@@ -194,8 +191,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
     }
     /**
      * get dependency field.
-     *
-     * @return Magento\Config\Model\Config\Structure\Element\Dependency\Field [description]
+     * @return Magento\Config\Model\Config\Structure\Element\Dependency\Field 
      */
     public function getDependencyField($refField, $negative = false, $separator = ',', $fieldPrefix = '')
     {
@@ -216,7 +212,6 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
 
     /**
      * Prepare label for tab.
-     *
      * @return string
      */
     public function getTabLabel()
@@ -226,7 +221,6 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
 
     /**
      * Prepare title for tab.
-     *
      * @return string
      */
     public function getTabTitle()

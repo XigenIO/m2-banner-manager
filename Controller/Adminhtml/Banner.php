@@ -12,7 +12,6 @@ abstract class Banner extends \Xigen\Bannermanager\Controller\Adminhtml\Abstract
 
     /**
      * Check if admin has permissions to visit related pages.
-     *
      * @return bool
      */
     protected function _isAllowed()
@@ -22,10 +21,8 @@ abstract class Banner extends \Xigen\Bannermanager\Controller\Adminhtml\Abstract
 
     /**
      * Get back result redirect after add/edit.
-     *
      * @param \Magento\Framework\Controller\Result\Redirect $resultRedirect
-     * @param null                                          $paramCrudId
-     *
+     * @param null $paramCrudId
      * @return \Magento\Framework\Controller\Result\Redirect
      */
     protected function _getBackResultRedirect(\Magento\Framework\Controller\Result\Redirect $resultRedirect, $paramCrudId = null)

@@ -27,7 +27,7 @@
         <referenceContainer name="left">
         <block class="Xigen\Bannermanager\Block\Adminhtml\Banner\Edit\Tabs" name="banner_edit_tabs">
             <block class="Xigen\Bannermanager\Block\Adminhtml\Banner\Edit\Tab\Form" name="banner_edit_tab_form"/>
-        	<action method="addTab">
+            <action method="addTab">
                 <argument name="name" xsi:type="string">main_section</argument>
                 <argument name="block" xsi:type="string">banner_edit_tab_form</argument>
             </action>

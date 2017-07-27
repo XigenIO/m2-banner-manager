@@ -9,7 +9,7 @@ namespace Xigen\Bannermanager\Block\Adminhtml;
 class Slider extends \Magento\Backend\Block\Widget\Grid\Container
 {
     /**
-     * Constructor.
+     * Constructor
      */
     protected function _construct()
     {

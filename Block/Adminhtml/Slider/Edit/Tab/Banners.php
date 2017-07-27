@@ -12,18 +12,16 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
 {
     /**
      * banner factory.
-     *
      * @var \Xigen\Bannermanager\Model\ResourceModel\Banner\CollectionFactory
      */
     protected $_bannerCollectionFactory;
 
     /**
-     * [__construct description].
-     *
-     * @param \Magento\Backend\Block\Template\Context                         $context
-     * @param \Magento\Backend\Helper\Data                                    $backendHelper
+     * Constructor
+     * @param \Magento\Backend\Block\Template\Context $context
+     * @param \Magento\Backend\Helper\Data $backendHelper
      * @param \Xigen\Bannermanager\Model\ResourceModel\Banner\CollectionFactory $bannerCollectionFactory
-     * @param array                                                           $data
+     * @param array $data
      */
     public function __construct(
         \Magento\Backend\Block\Template\Context $context,
@@ -208,7 +206,6 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
 
     /**
      * Prepare label for tab.
-     *
      * @return string
      */
     public function getTabLabel()
@@ -218,7 +215,6 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
 
     /**
      * Prepare title for tab.
-     *
      * @return string
      */
     public function getTabTitle()

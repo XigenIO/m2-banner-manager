@@ -13,7 +13,6 @@ class Status
 
     /**
      * get available statuses.
-     *
      * @return []
      */
     public static function getAvailableStatuses()
