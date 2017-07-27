@@ -1,0 +1,20 @@
+<?php
+/**
+ * Xigen
+ */
+?>
+<?php if ($block->isShowTitle() == 1) :
+    ?>
+    <div class="xigen-bannermanager-title" style="font: bold 12px/16px Arial, Helvetica, sans-serif;text-transform: uppercase;color: #e26703;">
+        <strong><span><?php echo $block->escapeHtml($block->getSlider()->getTitle()); ?></span></strong>
+    </div>
+<?php endif; ?>
+<div class="xigen-bannermanager-static">
+    <?php foreach ($block->getBannerCollection() as $banner) : ?>
+        <div>
+            <a href="<?php echo $banner->getClickUrl() ?>" target="<?php echo $banner->getTargetValue() ?>" style="display:block;">
+                <img alt="<?php echo $banner->getImageAlt() ?>"  src="<?php echo $block->getBannerImageUrl($banner) ?>"/>
+            </a>
+        </div>
+    <?php endforeach ?>
+</div>

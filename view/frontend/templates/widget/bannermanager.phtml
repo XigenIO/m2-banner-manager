@@ -1,0 +1,11 @@
+<?php
+/**
+ * Xigen
+ */
+?>
+<div class="xigen-bannermanager widget-bannermanager">
+    <?php
+    $sliderId = $block->getData('slider');
+    echo $this->getLayout()->createBlock("Xigen\Bannermanager\Block\SliderItem")->setSliderId($sliderId)->toHtml();
+    ?>
+</div>

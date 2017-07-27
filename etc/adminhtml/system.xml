@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Xigen
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="xigen" translate="label" sortOrder="450">
+            <label>xigen</label>
+        </tab>
+        <section id="bannermanager" translate="label" type="text" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Banner Slider</label>
+            <tab>xigen</tab>
+            <resource>Xigen_Bannermanager::config_bannermanager</resource>
+            <group id="general" translate="label" type="text" sortOrder="5" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <field id="enable_frontend" translate="label comment" type="select" sortOrder="0"  showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <comment>Enable frontend</comment>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="implement" translate="label" type="text" sortOrder="6" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Implement Code</label>
+                <frontend_model>Xigen\Bannermanager\Block\Adminhtml\System\Config\Implementcode</frontend_model>
+            </group>
+        </section>
+    </system>
+</config>

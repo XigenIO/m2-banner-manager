@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Xigen
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Xigen_Bannermanager::bannermanager" title="Banner Slider" sortOrder="10">
+                    <resource id="Xigen_Bannermanager::bannermanager_bannermanager" title="Banner Slider" sortOrder="10">
+                        <resource id="Xigen_Bannermanager::bannermanager_sliders" title="Manage Sliders" sortOrder="10" />
+                        <resource id="Xigen_Bannermanager::bannermanager_banners" title="Manage Banners" sortOrder="10" />
+                        <resource id="Xigen_Bannermanager::settings" title="Settings" sortOrder="20" />
+                    </resource>
+                </resource>
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Xigen_Bannermanager::config_bannermanager" title="Banner Slider" />
+                        </resource>
+                    </resource>
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config>

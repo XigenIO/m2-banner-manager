@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
-    <menu>
-        <add id="Xigen_Bannermanager::banner_manager" title="Banner Manager" module="Xigen_Bannermanager" sortOrder="50" resource="Xigen_Bannermanager::banners" />
-        <add id="Xigen_Bannermanager::banners" title="Manage Banners" module="Xigen_Bannermanager" sortOrder="0" parent="Xigen_Bannermanager::banner_manager" action="banners/banners" resource="Xigen_Bannermanager::banner"/>
-        <add id="Xigen_Bannermanager::sliders" title="Manage Groups" module="Xigen_Bannermanager" sortOrder="1" parent="Xigen_Bannermanager::banner_manager" action="banners/sliders" resource="Xigen_Bannermanager::sliders"/>
-        <add id="Xigen_Bannermanager::settings" title="Settings" module="Xigen_Bannermanager" sortOrder="2" parent="Xigen_Bannermanager::banner_manager" action="banners/settings" resource="Xigen_Bannermanager::settings"/>
-    </menu>
-</config>
