@@ -58,7 +58,7 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
     protected function _prepareCollection()
     {
         /** @var \Xigen\Bannermanager\Model\ResourceModel\Banner\Collection $collection */
-        $collection = $this->_bannerCollectionFactory->create()->setStoreViewId(null);
+        $collection = $this->_bannerCollectionFactory->create();
         $collection->setIsLoadSliderTitle(TRUE);
 
         $this->setCollection($collection);

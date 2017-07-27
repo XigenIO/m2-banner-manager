@@ -90,10 +90,10 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
      */
     protected function _prepareForm()
     {
-        $model = $this->_coreRegistry->registry('banner');
+        $banner = $this->getBanner();
 
         if ($sliderId = $this->getRequest()->getParam('current_slider_id')) {
-            $model->setSliderId($sliderId);
+            $banner->setSliderId($sliderId);
         }
 
         /** @var \Magento\Framework\Data\Form $form */
@@ -103,7 +103,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
 
         $fieldset = $form->addFieldset('base_fieldset', ['legend' => __('Banner Information')]);
 
-        if ($model->getId()) {
+        if ($banner->getId()) {
             $fieldset->addField('banner_id', 'hidden', ['name' => 'banner_id']);
         }
 
@@ -154,7 +154,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
                 [
                     'label' => __('Slider'),
                     'name' => 'slider_id',
-                    'values' => $model->getAvailableSlides(),
+                    'values' => $banner->getAvailableSlides(),
                 ]
             );
         }
@@ -213,20 +213,21 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
                 'values' => [
                     [
                         'value' => \Xigen\Bannermanager\Model\Banner::BANNER_TARGET_SELF,
-                        'label' => __('New Window with Browser Navigation'),
+                        'label' => __('Same Window'),
                     ],
                     [
                         'value' => \Xigen\Bannermanager\Model\Banner::BANNER_TARGET_PARENT,
-                        'label' => __('Parent Window with Browser Navigation'),
+                        'label' => __('Parent Window'),
                     ],
                     [
                         'value' => \Xigen\Bannermanager\Model\Banner::BANNER_TARGET_BLANK,
-                        'label' => __('New Window without Browser Navigation'),
+                        'label' => __('New Window'),
                     ],
                 ],
             ]
         );
 
+        $form->setValues($banner->getData());
         $this->setForm($form);
 
         return parent::_prepareForm();
