@@ -110,8 +110,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     public function getSliderModeAvailable()
     {
         return [
-            Slider::STYLESLIDE_STATIC_TEMPLATE => 'Static',
-            Slider::STYLESLIDE_BOOTSTRAP_TEMPLATE => 'Bootstrap',
+            Slider::STYLESLIDE_STATIC_TEMPLATE      => 'Static',
+            Slider::STYLESLIDE_BOOTSTRAP_TEMPLATE   => 'Bootstrap',
+            Slider::STYLESLIDE_SLICK_TEMPLATE       => 'Slick',
         ];
     }
 
@@ -136,6 +137,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
                 'label' => __('Responsive'),
                 'value' => [
                     ['value' => Slider::STYLESLIDE_BOOTSTRAP_TEMPLATE, 'label' => __('Bootstrap')],
+                    ['value' => Slider::STYLESLIDE_SLICK_TEMPLATE, 'label' => __('Slick')],
                 ],
             ],
         ];
@@ -299,6 +301,10 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             [
                 'label' => __('Bootstrap'),
                 'value' => Slider::STYLESLIDE_BOOTSTRAP_TEMPLATE,
+            ],
+            [
+                'label' => __('Slick'),
+                'value' => Slider::STYLESLIDE_SLICK_TEMPLATE,
             ],
         ];
     }
