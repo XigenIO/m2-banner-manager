@@ -14,7 +14,7 @@
                 <!-- Wrapper for slides -->
                 <div class="carousel-inner"><?php $i = 0; foreach ($block->getBannerCollection() as $banner): $i++; ?>                  
                     <div class="item <?php echo (($i == 1) ? 'active' : '');?>">
-                        <?php if($banner->getClickUrl()) : ?><a href="<?php echo $banner->getClickUrl(); ?>"><?php endif; ?>
+                        <?php if($banner->getClickUrl()) : ?><a href="<?php echo $banner->getClickUrl(); ?>" target="<?php echo $banner->getTargetValue() ?>"><?php endif; ?>
                         <img src="<?php echo $block->getBannerImageUrl($banner) ?>" title="<?php echo $banner->getName(); ?>" alt="<?php echo $banner->getName(); ?>" />
                         <div class="carousel-caption">
                             <?php if($banner->getShowTitle() && $banner->getName()): ?>

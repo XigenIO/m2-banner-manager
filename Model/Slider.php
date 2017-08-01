@@ -13,18 +13,19 @@ class Slider extends \Magento\Framework\Model\AbstractModel
     /**
      * Allow to show title or not.
      */
-    const SHOW_TITLE_YES = 1;
-    const SHOW_TITLE_NO = 2;
+    const SHOW_TITLE_YES    = 1;
+    const SHOW_TITLE_NO     = 2;
 
     /**
      * sort type of banners in a slider.
      */
-    const SORT_TYPE_RANDOM = 1;
+    const SORT_TYPE_RANDOM  = 1;
     const SORT_TYPE_ORDERLY = 2;
 
 
-    const STYLESLIDE_STATIC_TEMPLATE = 1;
+    const STYLESLIDE_STATIC_TEMPLATE    = 1;
     const STYLESLIDE_BOOTSTRAP_TEMPLATE = 2;
+    const STYLESLIDE_SLICK_TEMPLATE     = 3;
 
     /**
      * banner collection factory.
