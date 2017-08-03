@@ -6,7 +6,6 @@
 
 namespace Xigen\Bannermanager\Ui\Component\Listing\Column;
 
-
 use Magento\Framework\UrlInterface;
 
 use Magento\Framework\View\Element\UiComponentFactory;
@@ -21,7 +20,7 @@ class BannerstatusActions extends \Xigen\Bannermanager\Ui\Component\Listing\Colu
     protected $urlBuilder;
 
     /**
-     * 
+     *
      * @param ContextInterface $context
      * @param UiComponentFactory $uiComponentFactory
      * @param UrlInterface $urlBuilder
@@ -44,7 +43,8 @@ class BannerstatusActions extends \Xigen\Bannermanager\Ui\Component\Listing\Colu
      * @param array $item
      * @return $this
      */
-    protected function _prepareItem(array & $item) {
+    protected function _prepareItem(array & $item)
+    {
         $itemsAction = $this->getData('itemsAction');
         $indexField = $this->getData('config/indexField');
 

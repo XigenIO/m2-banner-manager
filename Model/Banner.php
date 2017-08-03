@@ -44,7 +44,7 @@ class Banner extends \Magento\Framework\Model\AbstractModel
     protected $_monolog;
 
     /**
-     * 
+     *
      * @param \Magento\Framework\Model\Context $context
      * @param \Magento\Framework\Registry $registry
      * @param \Xigen\Bannermanager\Model\ResourceModel\Banner $resource

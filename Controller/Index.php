@@ -41,7 +41,7 @@ abstract class Index extends \Magento\Framework\App\Action\Action
     protected $_stdTimezone;
 
     /**
-     * 
+     *
      * @param \Magento\Framework\App\Action\Context $context
      * @param \Xigen\Bannermanager\Model\SliderFactory $sliderFactory
      * @param \Xigen\Bannermanager\Model\BannerFactory $bannerFactory
@@ -64,5 +64,4 @@ abstract class Index extends \Magento\Framework\App\Action\Action
         $this->_monolog = $monolog;
         $this->_stdTimezone = $stdTimezone;
     }
-
 }

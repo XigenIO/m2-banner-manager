@@ -81,7 +81,6 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
         );
 
         return $this;
-
     }
 
     /**
@@ -141,7 +140,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
                 'name' => 'show_title',
                 'options' => Status::getAvailableStatuses(),
             ]
-        ); 
+        );
 
         $slider = $this->_sliderFactory->create()->load($sliderId);
 

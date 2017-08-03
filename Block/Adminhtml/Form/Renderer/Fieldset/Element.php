@@ -35,7 +35,7 @@ class Element extends \Magento\Backend\Block\Widget\Form\Renderer\Fieldset\Eleme
      */
     public function canDisplayUseDefault()
     {
-        return ($this->getRequest()->getParam('store') && $this->getElement()->getDateFormat() == NULL && $this->getElementName() != 'slider_id') ? TRUE : FALSE;
+        return ($this->getRequest()->getParam('store') && $this->getElement()->getDateFormat() == null && $this->getElementName() != 'slider_id') ? true : false;
     }
 
     /**

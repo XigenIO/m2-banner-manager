@@ -45,6 +45,6 @@ class EditBanner extends \Magento\Backend\Block\Widget\Grid\Column\Renderer\Abst
      */
     public function render(\Magento\Framework\DataObject $row)
     {
-        return '<a href="' . $this->getUrl('*/banner/edit', ['_current' => FALSE, 'banner_id' => $row->getId()]) . '" target="_blank">Edit</a> ';
+        return '<a href="' . $this->getUrl('*/banner/edit', ['_current' => false, 'banner_id' => $row->getId()]) . '" target="_blank">Edit</a> ';
     }
 }

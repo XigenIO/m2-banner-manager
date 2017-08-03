@@ -28,7 +28,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     protected $_categoryCollectionFactory;
 
     /**
-     * 
+     *
      * @param \Magento\Framework\App\Helper\Context $context
      * @param \Magento\Catalog\Model\ResourceModel\Category\CollectionFactory $categoryCollectionFactory
      * @param \Magento\Backend\Model\UrlInterface $backendUrl
@@ -48,9 +48,9 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
 
     /**
      * get Base Url Media.
-     * @param string $path   
-     * @param bool   $secure 
-     * @return string 
+     * @param string $path
+     * @param bool   $secure
+     * @return string
      */
     public function getBaseUrlMedia($path = '', $secure = false)
     {

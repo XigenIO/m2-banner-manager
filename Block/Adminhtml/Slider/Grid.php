@@ -44,7 +44,7 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
     }
 
     /**
-     * 
+     *
      */
     protected function _construct()
     {
@@ -59,7 +59,7 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
     /**
      * prepare collection.
      *
-     * @return [type] 
+     * @return [type]
      */
     protected function _prepareCollection()
     {
@@ -85,11 +85,11 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
             ]
         );
         
-         /**
-          * Check is single store mode
-          */
+        /**
+         * Check is single store mode
+         */
         if (!$this->_storeManager->isSingleStoreMode()) {
-           $this->addColumn(
+            $this->addColumn(
                'store_id',
                 [
                     'header' => __('Store View'),

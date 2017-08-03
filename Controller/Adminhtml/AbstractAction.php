@@ -90,7 +90,7 @@ abstract class AbstractAction extends \Magento\Backend\App\Action
     protected $_adapterFactory;
 
     /**
-     * 
+     *
      * @param \Magento\Backend\App\Action\Context $context
      * @param \Xigen\Bannermanager\Model\BannerFactory $bannerFactory
      * @param \Xigen\Bannermanager\Model\SliderFactory $sliderFactory

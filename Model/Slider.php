@@ -34,7 +34,7 @@ class Slider extends \Magento\Framework\Model\AbstractModel
     protected $_bannerCollectionFactory;
 
     /**
-     * 
+     *
      * @param \Magento\Framework\Model\Context $context
      * @param \Magento\Framework\Registry $registry
      * @param \Xigen\Bannermanager\Model\ResourceModel\Banner\CollectionFactory $bannerCollectionFactory
@@ -65,5 +65,4 @@ class Slider extends \Magento\Framework\Model\AbstractModel
     {
         return $this->_bannerCollectionFactory->create()->addFieldToFilter('slider_id', $this->getId());
     }
-
 }
