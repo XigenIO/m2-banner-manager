@@ -48,8 +48,8 @@ class Image extends \Magento\Backend\Block\Widget\Grid\Column\Renderer\AbstractR
         $storeViewId = $this->getRequest()->getParam('store');
         $banner = $this->_bannerFactory->create()->load($row->getId());
         $srcImage = $this->_storeManager->getStore()->getBaseUrl(
-                \Magento\Framework\UrlInterface::URL_TYPE_MEDIA
-            ) . $banner->getImage();
+            \Magento\Framework\UrlInterface::URL_TYPE_MEDIA
+        ) . $banner->getImage();
 
         return '<image width="150" height="50" src ="'.$srcImage.'" alt="'.$banner->getImage().'" >';
     }
