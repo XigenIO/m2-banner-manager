@@ -25,7 +25,7 @@ class Image extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractCol
     protected $_storeManager;
 
     /**
-     * 
+     *
      * @param ContextInterface $context
      * @param UiComponentFactory $uiComponentFactory
      * @param \Magento\Framework\Filesystem $filesystem

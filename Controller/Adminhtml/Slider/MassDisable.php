@@ -26,10 +26,9 @@ class MassDisable extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractActi
         $collectionSize = $collection->getSize();
         foreach ($collection as $item) {
             $item->setStatus(StatusesArray::STATUS_DISABLED);
-            try{
+            try {
                 $item->save();
-
-            }catch (\Exception $e){
+            } catch (\Exception $e) {
                 $this->messageManager->addError($e->getMessage());
             }
         }

@@ -10,7 +10,6 @@ use Magento\Framework\Controller\ResultFactory;
 
 class MassDelete extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractAction
 {
-
     public function execute()
     {
         $sliderIds = $this->getRequest()->getParam('slider');

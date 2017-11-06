@@ -57,7 +57,7 @@ class Banners extends \Magento\Backend\Block\Widget\Grid\Extended
     {
         /** @var \Xigen\Bannermanager\Model\ResourceModel\Banner\Collection $collection */
         $collection = $this->_bannerCollectionFactory->create();
-        $collection->setIsLoadSliderTitle(TRUE);
+        $collection->setIsLoadSliderTitle(true);
 
         $this->setCollection($collection);
 

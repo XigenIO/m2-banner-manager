@@ -118,8 +118,8 @@ class SliderItem extends \Magento\Framework\View\Element\Template
         );
         
         $show = true;
-        if($this->_slider->getStoreId() > 0) {
-            if($store != $this->_slider->getStoreId()) {
+        if ($this->_slider->getStoreId() > 0) {
+            if ($store != $this->_slider->getStoreId()) {
                 $show = false;
             }
         }
@@ -178,7 +178,7 @@ class SliderItem extends \Magento\Framework\View\Element\Template
 
     public function isShowTitle()
     {
-        return $this->_slider->getShowTitle() == SliderModel::SHOW_TITLE_YES ? TRUE : FALSE;
+        return $this->_slider->getShowTitle() == SliderModel::SHOW_TITLE_YES ? true : false;
     }
 
     /**
@@ -218,7 +218,7 @@ class SliderItem extends \Magento\Framework\View\Element\Template
     /**
      * set slider model.
      *
-     * @param \Xigen\Bannermanager\Model\Slider $slider 
+     * @param \Xigen\Bannermanager\Model\Slider $slider
      */
     public function setSlider(\Xigen\Bannermanager\Model\Slider $slider)
     {
@@ -246,5 +246,4 @@ class SliderItem extends \Magento\Framework\View\Element\Template
     {
         return $this->_bannermanagerHelper->getBaseUrlMedia($banner->getImage());
     }
-
 }

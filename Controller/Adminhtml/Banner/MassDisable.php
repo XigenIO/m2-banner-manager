@@ -21,16 +21,14 @@ class MassDisable extends \Xigen\Bannermanager\Controller\Adminhtml\AbstractActi
      */
     public function execute()
     {
-
         $collection = $this->_massActionFilter->getCollection($this->_createMainCollection());
         $collectionSize = $collection->getSize();
         $storeId = $this->getRequest()->getParam('store');
         foreach ($collection as $item) {
             $item->setStatus(StatusesArray::STATUS_DISABLED);
-            try{
+            try {
                 $item->save();
-
-            }catch (\Exception $e){
+            } catch (\Exception $e) {
                 $this->messageManager->addError($e->getMessage());
             }
         }

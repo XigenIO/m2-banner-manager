@@ -26,7 +26,7 @@ class Slider implements \Magento\Framework\Option\ArrayInterface
     {
         $sliders = [];
         foreach ($this->getSliders() as $slider) {
-            array_push($sliders,[
+            array_push($sliders, [
                 'value' => $slider['slider_id'],
                 'label' => $slider['title']
             ]);

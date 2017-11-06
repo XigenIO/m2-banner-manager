@@ -24,7 +24,7 @@ class Slider extends \Xigen\Bannermanager\Ui\Component\Listing\Column\AbstractCo
     protected $_sliderFactory;
     
     /**
-     * 
+     *
      * @param ContextInterface $context
      * @param UiComponentFactory $uiComponentFactory
      * @param \Magento\Framework\Filesystem $filesystem

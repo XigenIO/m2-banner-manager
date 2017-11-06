@@ -24,7 +24,7 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
     /**
      * @var bool
      */
-    protected $_isLoadSliderTitle = FALSE;
+    protected $_isLoadSliderTitle = false;
 
     /**
      * @var \Magento\Framework\Stdlib\DateTime\Timezone
@@ -44,28 +44,28 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
         $this->_init('Xigen\Bannermanager\Model\Banner', 'Xigen\Bannermanager\Model\ResourceModel\Banner');
     }
 
-    /**
-     * 
-     * @param \Magento\Framework\Data\Collection\EntityFactoryInterface $entityFactory
-     * @param \Psr\Log\LoggerInterface $logger
-     * @param \Magento\Framework\Data\Collection\Db\FetchStrategyInterface $fetchStrategy
-     * @param \Magento\Framework\Event\ManagerInterface $eventManager
-     * @param \Magento\Store\Model\StoreManagerInterface $storeManager
-     * @param \Magento\Framework\Stdlib\DateTime\Timezone $stdTimezone
-     * @param \Xigen\Bannermanager\Model\Slider $slider
-     * @param type $connection
-     * @param \Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource
-     */
+     /**
+      * Undocumented function
+      * @param \Magento\Framework\Data\Collection\EntityFactoryInterface $entityFactory
+      * @param \Psr\Log\LoggerInterface $logger
+      * @param \Magento\Framework\Data\Collection\Db\FetchStrategyInterface $fetchStrategy
+      * @param \Magento\Framework\Event\ManagerInterface $eventManager
+      * @param \Magento\Framework\DB\Adapter\AdapterInterface $connection
+      * @param \Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource
+      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
+      * @param \Magento\Framework\Stdlib\DateTime\Timezone $stdTimezone
+      * @param \Xigen\Bannermanager\Model\Slider $slider
+      */
     public function __construct(
         \Magento\Framework\Data\Collection\EntityFactoryInterface $entityFactory,
         \Psr\Log\LoggerInterface $logger,
         \Magento\Framework\Data\Collection\Db\FetchStrategyInterface $fetchStrategy,
         \Magento\Framework\Event\ManagerInterface $eventManager,
+        \Magento\Framework\DB\Adapter\AdapterInterface $connection = null,
+        \Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource = null,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Framework\Stdlib\DateTime\Timezone $stdTimezone,
-        \Xigen\Bannermanager\Model\Slider $slider,
-        $connection = null,
-        \Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource = null
+        \Xigen\Bannermanager\Model\Slider $slider
     ) {
         parent::__construct($entityFactory, $logger, $fetchStrategy, $eventManager, $connection, $resource);
         $this->_storeManager = $storeManager;

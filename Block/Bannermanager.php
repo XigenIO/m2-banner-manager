@@ -57,7 +57,9 @@ class Bannermanager extends \Magento\Framework\View\Element\Template
         $store = $this->_storeManager->getStore()->getId();
 
         if ($this->_scopeConfig->getValue(
-            SliderModel::XML_CONFIG_BANNERSLIDER, \Magento\Store\Model\ScopeInterface::SCOPE_STORE, $store
+            SliderModel::XML_CONFIG_BANNERSLIDER,
+            \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
+            $store
         )
         ) {
             return parent::_toHtml();
@@ -69,9 +71,9 @@ class Bannermanager extends \Magento\Framework\View\Element\Template
     /**
      * add child block slider.
      *
-     * @param \Xigen\Bannermanager\Model\ResourceModel\Slider\Collection $sliderCollection 
+     * @param \Xigen\Bannermanager\Model\ResourceModel\Slider\Collection $sliderCollection
      *
-     * @return \Xigen\Bannermanager\Block\Bannermanager 
+     * @return \Xigen\Bannermanager\Block\Bannermanager
      */
     public function appendChildBlockSliders(
         \Xigen\Bannermanager\Model\ResourceModel\Slider\Collection $sliderCollection
@@ -131,5 +133,4 @@ class Bannermanager extends \Magento\Framework\View\Element\Template
         }
         return $this;
     }
-
 }

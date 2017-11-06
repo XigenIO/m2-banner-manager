@@ -206,7 +206,7 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
     }
     /**
      * get dependency field.
-     * @return Magento\Config\Model\Config\Structure\Element\Dependency\Field 
+     * @return Magento\Config\Model\Config\Structure\Element\Dependency\Field
      */
     public function getDependencyField($refField, $negative = false, $separator = ',', $fieldPrefix = '')
     {
