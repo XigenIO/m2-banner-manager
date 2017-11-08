@@ -20,45 +20,43 @@ class Collection extends SliderCollection implements SearchResultInterface
     protected $aggregations;
 
     /**
-     * Undocumented function
      * @param \Magento\Framework\Data\Collection\EntityFactoryInterface $entityFactory
      * @param \Psr\Log\LoggerInterface $logger
      * @param \Magento\Framework\Data\Collection\Db\FetchStrategyInterface $fetchStrategy
      * @param \Magento\Framework\Event\ManagerInterface $eventManager
-     * @param \Magento\Framework\DB\Adapter\AdapterInterface $connection
-     * @param \Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource
      * @param \Magento\Store\Model\StoreManagerInterface $storeManager
-     * @param \Magento\Framework\Stdlib\DateTime\Timezone $stdTimezone
-     * @param $mainTable
-     * @param $eventPrefix
-     * @param $eventObject
-     * @param $resourceModel
+     * @param mixed|null $mainTable
+     * @param \Magento\Framework\Model\ResourceModel\Db\AbstractDb $eventPrefix
+     * @param mixed $eventObject
+     * @param mixed $resourceModel
      * @param string $model
+     * @param null $connection
+     * @param \Magento\Framework\Model\ResourceModel\Db\AbstractDb|null $resource
      */
     public function __construct(
         \Magento\Framework\Data\Collection\EntityFactoryInterface $entityFactory,
         \Psr\Log\LoggerInterface $logger,
         \Magento\Framework\Data\Collection\Db\FetchStrategyInterface $fetchStrategy,
         \Magento\Framework\Event\ManagerInterface $eventManager,
-        \Magento\Framework\DB\Adapter\AdapterInterface $connection = null,
-        \Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource = null,
         \Magento\Store\Model\StoreManagerInterface $storeManager,
         \Magento\Framework\Stdlib\DateTime\Timezone $stdTimezone,
         $mainTable,
         $eventPrefix,
         $eventObject,
         $resourceModel,
-        $model = 'Magento\Framework\View\Element\UiComponent\DataProvider\Document'
+        $model = 'Magento\Framework\View\Element\UiComponent\DataProvider\Document',
+        $connection = null,
+        \Magento\Framework\Model\ResourceModel\Db\AbstractDb $resource = null
     ) {
         parent::__construct(
             $entityFactory,
             $logger,
             $fetchStrategy,
             $eventManager,
-            $connection,
-            $resource,
             $storeManager,
-            $stdTimezone
+            $stdTimezone,
+            $connection,
+            $resource
         );
         $this->_eventPrefix = $eventPrefix;
         $this->_eventObject = $eventObject;
