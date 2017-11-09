@@ -7,21 +7,8 @@
             "url": "https://repo.magento.com/"
         }
     ],
-    "require": {
-        "php": "~5.5.0|~5.6.0|~7.0.0",
-        "zendframework/zend-http": "~2.4.6"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^4.8",
-        "phpmd/phpmd": "^2.4",
-        "squizlabs/php_codesniffer": "3.0.2",
-        "friendsofphp/php-cs-fixer": "~2.1.1",
-        "sebastian/phpcpd": "^2.0",
-        "satooshi/php-coveralls": "^1.0",
-        "phpdocumentor/phpdocumentor": "^2.8"
-    },
     "type": "magento2-module",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
