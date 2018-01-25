@@ -8,7 +8,7 @@ namespace Xigen\Bannermanager\Model;
 
 class Banner extends \Magento\Framework\Model\AbstractModel
 {
-    const BASE_MEDIA_PATH = 'xigen/bannermanager/images';
+    const BASE_MEDIA_PATH = 'xigen/slider/images';
 
     const BANNER_TARGET_SELF = 0;
     const BANNER_TARGET_PARENT = 1;

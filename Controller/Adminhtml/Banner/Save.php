@@ -58,7 +58,7 @@ class Save extends \Xigen\Bannermanager\Controller\Adminhtml\Banner
                     $result = $uploader->save(
                         $mediaDirectory->getAbsolutePath(\Xigen\Bannermanager\Model\Banner::BASE_MEDIA_PATH)
                     );
-                    $data['image'] = \Xigen\Bannermanager\Model\Banner::BASE_MEDIA_PATH.$result['file'];
+                    $data['image'] = \Xigen\Bannermanager\Model\Banner::BASE_MEDIA_PATH . $result['file'];
                 } catch (\Exception $e) {
                     if ($e->getCode() == 0) {
                         $this->messageManager->addError($e->getMessage());
