@@ -4,8 +4,8 @@
  * @author Xigen
  */
 ?>
-<div id="homepage-carousel">
-    <div class="hero-slider">
+<div id="homepage-carousel-<?php echo $block->getSlider()->getId(); ?>">
+    <div class="hero-slider <?php echo $block->getSlider()->getCssClass(); ?>">
         <?php $i = 0; foreach ($block->getBannerCollection() as $banner): $i++; ?>
         <div class="slide <?php echo (($i == 1) ? 'active' : '');?>" data-id="<?php echo $banner->getId(); ?>">
             <?php if($banner->getClickUrl()) : ?><a href="<?php echo $banner->getClickUrl(); ?>" target="<?php echo $banner->getTargetValue() ?>"><?php endif; ?>
