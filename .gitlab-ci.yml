@@ -1,0 +1,11 @@
+before_script:
+  - composer install --prefer-dist -q
+
+stages:
+  - test
+
+Test Quality :
+  stage: test
+  script:
+    - php vendor/bin/phpcs --standard=PSR2 --colors -pn src/
+    - php vendor/bin/phpmd src text cleancode,codesize,controversial,design,naming,unusedcode --suffixes php
