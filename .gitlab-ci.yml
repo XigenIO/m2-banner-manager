@@ -10,4 +10,4 @@ Mess Detector:
   stage: test
   allow_failure: true
   script:
-    - ~/.composer/vendor/bin/phpmd ./ text cleancode,codesize,controversial,design,naming,unusedcode --suffixes php
+    - ~/.composer/vendor/bin/phpmd ./ text phpmd.xml --suffixes php
