@@ -1,14 +1,8 @@
 {
     "name": "magento-modules/m2-banner-manager",
     "description": "N/A",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://repo.magento.com/"
-        }
-    ],
     "type": "magento2-module",
-    "version": "1.0.8",
+    "version": "1.0.9",
     "license": [
         "OSL-3.0",
         "AFL-3.0"
