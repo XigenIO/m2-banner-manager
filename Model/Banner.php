@@ -8,7 +8,12 @@ namespace Xigen\Bannermanager\Model;
 
 class Banner extends \Magento\Framework\Model\AbstractModel
 {
-    const BASE_MEDIA_PATH = 'xigen/slider/images';
+    /**
+     * Path to store uploaded images. Using base64 encoded version of bannermanager
+     * to prevent adblockers blocking the request
+     * @var string
+     */
+    const BASE_MEDIA_PATH = 'xigen/YmFubmVyaW1hZ2VzCg/images';
 
     const BANNER_TARGET_SELF = 0;
     const BANNER_TARGET_PARENT = 1;
