@@ -30,7 +30,7 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
     /**
      * @var bool
      */
-    protected $_isLoadSliderTitle = FALSE;
+    protected $_isLoadSliderTitle = false;
 
     /**
      * @var \Magento\Framework\Stdlib\DateTime\Timezone
@@ -68,5 +68,4 @@ class Collection extends \Magento\Framework\Model\ResourceModel\Db\Collection\Ab
         $this->_storeManager = $storeManager;
         $this->_stdTimezone = $stdTimezone;
     }
-
 }

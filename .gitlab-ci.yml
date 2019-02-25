@@ -1,0 +1,13 @@
+stages:
+  - test
+
+Code Style:
+  stage: test
+  script:
+    - ~/.composer/vendor/bin/phpcs --standard=PSR2 --colors -pn ./
+
+Mess Detector:
+  stage: test
+  allow_failure: true
+  script:
+    - ~/.composer/vendor/bin/phpmd ./ text phpmd.xml --suffixes php

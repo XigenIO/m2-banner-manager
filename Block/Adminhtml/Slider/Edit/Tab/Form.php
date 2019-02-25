@@ -120,6 +120,18 @@ class Form extends \Magento\Backend\Block\Widget\Form\Generic implements \Magent
             ]
         );
 
+        $fieldset->addField(
+            'css_class',
+            'text',
+            [
+                'name' => 'css_class',
+                'label' => __('CSS Class'),
+                'title' => __('CSS Class'),
+                'required' => false,
+            ]
+        );
+
+
         $fieldMaps['status'] = $fieldset->addField(
             'status',
             'select',

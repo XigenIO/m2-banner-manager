@@ -134,6 +134,16 @@ class Grid extends \Magento\Backend\Block\Widget\Grid\Extended
         );
 
         $this->addColumn(
+            'css_class',
+            [
+                'header' => __('CSS Class'),
+                'index' => 'css_class',
+                'width' => '50px',
+            ]
+        );
+
+
+        $this->addColumn(
             'status',
             [
                 'header' => __('Status'),
