@@ -16,6 +16,7 @@ class SliderItem extends \Magento\Framework\View\Element\Template
      * template for custom slider
      */
     const STYLESLIDE_STATIC_TEMPLATE    = 'Xigen_Bannermanager::slider/static.phtml';
+    const STYLESLIDE_STATIC_MOBILE_TEMPLATE    = 'Xigen_Bannermanager::slider/staticmobile.phtml';
     const STYLESLIDE_BOOTSTRAP_TEMPLATE = 'Xigen_Bannermanager::slider/bootstrap.phtml';
     const STYLESLIDE_SLICK_TEMPLATE     = 'Xigen_Bannermanager::slider/slick.phtml';
 
@@ -172,6 +173,9 @@ class SliderItem extends \Magento\Framework\View\Element\Template
                 break;
             case 3:
                 $this->setTemplate(self::STYLESLIDE_SLICK_TEMPLATE);
+                break;
+            case 4:
+                $this->setTemplate(self::STYLESLIDE_STATIC_MOBILE_TEMPLATE);
                 break;
         }
     }

@@ -111,6 +111,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
     {
         return [
             Slider::STYLESLIDE_STATIC_TEMPLATE      => 'Static',
+            Slider::STYLESLIDE_STATIC_MOBILE_TEMPLATE      => 'Static Mobile',
             Slider::STYLESLIDE_BOOTSTRAP_TEMPLATE   => 'Bootstrap',
             Slider::STYLESLIDE_SLICK_TEMPLATE       => 'Slick',
         ];
@@ -131,6 +132,7 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
                 'label' => __('Test Slider'),
                 'value' => [
                     ['value' => Slider::STYLESLIDE_STATIC_TEMPLATE, 'label' => __('Static')],
+                    ['value' => Slider::STYLESLIDE_STATIC_MOBILE_TEMPLATE, 'label' => __('Static Mobile')],
                 ],
             ],
             [
@@ -297,6 +299,10 @@ class Data extends \Magento\Framework\App\Helper\AbstractHelper
             [
                 'label' => __('Static'),
                 'value' => Slider::STYLESLIDE_STATIC_TEMPLATE,
+            ],
+            [
+                'label' => __('Static'),
+                'value' => Slider::STYLESLIDE_STATIC_MOBILE_TEMPLATE,
             ],
             [
                 'label' => __('Bootstrap'),
