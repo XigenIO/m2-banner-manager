@@ -1,0 +1,52 @@
+<?php
+
+/**
+ * bannermanager slider template
+ * @author Xigen
+ */
+
+// two banners simultanious sends query logic haywire
+$objectManager = \Magento\Framework\App\ObjectManager::getInstance();
+$resource       = $objectManager->get('Magento\Framework\App\ResourceConnection');
+$connection     = $resource->getConnection();
+$xbb            = $resource->getTableName('xigen_bannermanager_banner'); 
+$order          = $block->getSlider()->getSortType() == \Xigen\Bannermanager\Model\Slider::SORT_TYPE_RANDOM ? 'RAND()' : 'order_banner';
+$banners = $connection->fetchAll("SELECT * FROM " . $xbb . " 
+                                  WHERE status = " . $connection->quote(\Xigen\Bannermanager\Model\Status::STATUS_ENABLED)  . " 
+                                  AND slider_id = " .  $connection->quote($block->getSlider()->getId()) . " 
+                                  ORDER BY $order ASC "); 
+?>
+<?php if($banners): ?>
+    <?php if($block->isShowTitle() == 1): ?>
+        <div class="xigen-bannermanager-static-title">
+            <strong><span><?php echo $block->escapeHtml($block->getSlider()->getTitle()); ?></span></strong>
+        </div>
+    <?php endif; ?>
+    <div class="xigen-bannermanager-static" id="static-slider-<?php echo $block->getSlider()->getId(); ?>">
+            <?php $i = 0; foreach ($banners as $loadbanner): $i++; ?>
+            <?php
+            // literally wasted hours on simplest feature
+            $banner = $objectManager->get('Xigen\Bannermanager\Model\BannerFactory')->create();
+            $banner->load($loadbanner['banner_id']);
+            ?>
+            <div>
+                <?php if($banner->getClickUrl()): ?>
+                <a href="<?php echo $banner->getClickUrl() ?>" target="<?php echo $banner->getTargetValue() ?>">
+                <?php endif; ?>
+                    <img alt="<?php echo (($banner->getImageAlt()) ? $banner->getImageAlt() :  $banner->getName()); ?>" title="<?php echo (($banner->getImageAlt()) ? $banner->getImageAlt() :  $banner->getName()); ?>"  src="<?php echo $block->getBannerImageUrl($banner) ?>" class="img-responsive"/>
+                <?php if($banner->getClickUrl()): ?>
+                </a>
+                <?php endif; ?>
+                            
+                <?php if($banner->getShowTitle() == 1 && $banner->getName()): ?>
+                <h2><?php echo $banner->getName() ?></h2>
+                <?php endif; ?>
+                
+                <?php if($banner->getCaption()): ?>
+                <p><?php echo strip_tags($banner->getCaption()) ?></p>
+                <?php endif; ?>
+            </div>
+        <?php endforeach ?>
+    </div>
+
+<?php endif; ?>

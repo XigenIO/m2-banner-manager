@@ -11,7 +11,7 @@
             <?php if($banner->getClickUrl()) : ?><a href="<?php echo $banner->getClickUrl(); ?>" target="<?php echo $banner->getTargetValue() ?>"><?php endif; ?>
             <img src="<?php echo $block->getBannerImageUrl($banner) ?>" title="<?php echo $banner->getName(); ?>" alt="<?php echo $banner->getName(); ?>" class="img-responsive" />
             <div class="carousel-caption">
-                <?php if($banner->getShowTitle() && $banner->getName()): ?>
+                <?php if($banner->getShowTitle() == 1 && $banner->getName()): ?>
                 <h3><?php echo $banner->getName(); ?></h3>
                 <?php endif; ?>
                 <?php if(!empty($banner->getCaption())): ?>

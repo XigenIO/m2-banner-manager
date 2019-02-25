@@ -26,6 +26,7 @@ class Slider extends \Magento\Framework\Model\AbstractModel
     const STYLESLIDE_STATIC_TEMPLATE    = 1;
     const STYLESLIDE_BOOTSTRAP_TEMPLATE = 2;
     const STYLESLIDE_SLICK_TEMPLATE     = 3;
+    const STYLESLIDE_STATIC_MOBILE_TEMPLATE     = 4;
 
     /**
      * banner collection factory.
